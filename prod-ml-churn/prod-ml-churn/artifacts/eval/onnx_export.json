@@ -1,0 +1,20 @@
+{
+  "model_version": "20260726T102553",
+  "model_type": "logistic_regression",
+  "n_features": 19,
+  "artifact_size_kb": {
+    "framework_joblib": 3.0,
+    "onnx": 1.0
+  },
+  "parity": {
+    "max_abs_diff": 1.2693332251956235e-07,
+    "mean_abs_diff": 3.2882949510686796e-08,
+    "tolerance": 0.0001,
+    "passed": true
+  },
+  "latency_ms_per_call": {
+    "framework": 0.413,
+    "onnxruntime": 0.025,
+    "speedup_x": 16.64
+  }
+}
