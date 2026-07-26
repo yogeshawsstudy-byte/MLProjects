@@ -1,0 +1,67 @@
+{
+  "ts": "2026-07-26T10:33:04.090151+00:00",
+  "input": "data/raw/day_drift.csv",
+  "data_quality": {
+    "n_rows": 3000,
+    "null_rates": {
+      "customerID": 0.0,
+      "gender": 0.0,
+      "SeniorCitizen": 0.0,
+      "Partner": 0.0,
+      "Dependents": 0.0,
+      "tenure": 0.0,
+      "PhoneService": 0.0,
+      "MultipleLines": 0.0,
+      "InternetService": 0.0,
+      "OnlineSecurity": 0.0,
+      "OnlineBackup": 0.0,
+      "DeviceProtection": 0.0,
+      "TechSupport": 0.0,
+      "StreamingTV": 0.0,
+      "StreamingMovies": 0.0,
+      "Contract": 0.0,
+      "PaperlessBilling": 0.0,
+      "PaymentMethod": 0.0,
+      "MonthlyCharges": 0.0,
+      "TotalCharges": 0.0
+    },
+    "issues": [],
+    "status": "ok"
+  },
+  "drift": {
+    "features": {
+      "tenure": {
+        "psi": 0.07429685451750702,
+        "status": "ok",
+        "recent_mean": 35.712666666666664,
+        "recent_std": 21.206888178660776
+      },
+      "MonthlyCharges": {
+        "psi": 1.446199462877543,
+        "status": "alert",
+        "recent_mean": 53.19799,
+        "recent_std": 12.090730994990887
+      },
+      "TotalCharges": {
+        "psi": 0.3038842708787798,
+        "status": "alert",
+        "recent_mean": 1890.7717233333333,
+        "recent_std": 1219.451101266302
+      },
+      "num_addon_services": {
+        "psi": 3.3110562818587996,
+        "status": "alert",
+        "recent_mean": 1.8276666666666668,
+        "recent_std": 1.217908544276713
+      },
+      "charges_per_tenure_month": {
+        "psi": 1.1126790353553497,
+        "status": "alert",
+        "recent_mean": 52.54148664658322,
+        "recent_std": 13.668893991053672
+      }
+    },
+    "n_alerts": 4,
+    "overall_status": "alert"
+  }
+}

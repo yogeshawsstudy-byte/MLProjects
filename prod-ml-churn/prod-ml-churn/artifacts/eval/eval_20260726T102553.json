@@ -1,0 +1,82 @@
+{
+  "version": "20260726T102553",
+  "promoted": false,
+  "promotion_reason": "candidate AUC 0.8044 is worse than baseline 0.8107 by more than 0.0",
+  "winner": "baseline",
+  "baseline": {
+    "val": {
+      "roc_auc": 0.8107196540338081,
+      "pr_auc": 0.6796705246461063,
+      "precision": 0.5769230769230769,
+      "recall": 0.7645631067961165,
+      "f1": 0.6576200417536534,
+      "recall_at_20pct": 0.4174757281553398,
+      "threshold": 0.5,
+      "n_samples": 1200,
+      "positive_rate": 0.3433333333333333
+    },
+    "test": {
+      "roc_auc": 0.8022992028485536,
+      "pr_auc": 0.675031430188726,
+      "precision": 0.5673166202414113,
+      "recall": 0.741504854368932,
+      "f1": 0.64281956864808,
+      "recall_at_20pct": 0.41504854368932037,
+      "threshold": 0.5,
+      "n_samples": 2400,
+      "positive_rate": 0.3433333333333333
+    }
+  },
+  "candidate": {
+    "val": {
+      "roc_auc": 0.8044360800354837,
+      "pr_auc": 0.6853367934990134,
+      "precision": 0.6,
+      "recall": 0.7427184466019418,
+      "f1": 0.6637744034707158,
+      "recall_at_20pct": 0.40048543689320387,
+      "threshold": 0.5,
+      "n_samples": 1200,
+      "positive_rate": 0.3433333333333333
+    },
+    "test": {
+      "roc_auc": 0.8081646419594893,
+      "pr_auc": 0.691886956374801,
+      "precision": 0.591321897073663,
+      "recall": 0.7111650485436893,
+      "f1": 0.6457300275482094,
+      "recall_at_20pct": 0.4211165048543689,
+      "threshold": 0.5,
+      "n_samples": 2400,
+      "positive_rate": 0.3433333333333333
+    }
+  },
+  "meta": {
+    "version": "20260726T102553",
+    "model_type": "logistic_regression",
+    "training_data_hash": "8295a69e5eeb",
+    "n_training_rows": 12000,
+    "trained_at": "2026-07-26T10:25:53.929460+00:00",
+    "feature_order": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges",
+      "charges_per_tenure_month",
+      "monthly_to_total_ratio",
+      "num_addon_services",
+      "contract_risk_score",
+      "payment_auto_flag",
+      "is_high_value",
+      "tenure_bucket_ord",
+      "SeniorCitizen",
+      "gender_Male",
+      "Partner_Yes",
+      "Dependents_Yes",
+      "PhoneService_Yes",
+      "MultipleLines_Yes",
+      "PaperlessBilling_Yes",
+      "InternetService_Fiber_optic",
+      "InternetService_No"
+    ]
+  }
+}

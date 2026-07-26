@@ -1,0 +1,47 @@
+# Central config — used by training, serving, ingestion, monitoring
+paths:
+  raw_data_dir: data/raw
+  training_data: data/training/training.csv
+  models_dir: models
+  eval_dir: artifacts/eval
+  predictions_dir: artifacts/predictions
+  ingest_log: artifacts/ingest_log.jsonl
+
+data:
+  target_col: Churn
+  id_col: customerID
+  test_size: 0.2
+  val_size: 0.1
+  random_state: 42
+
+training:
+  baseline_model: logistic_regression
+  candidate_model: xgboost
+  candidate_params:
+    n_estimators: 200
+    max_depth: 5
+    learning_rate: 0.1
+    subsample: 0.9
+    eval_metric: logloss
+
+promotion:
+  min_auc: 0.80
+  max_regression_vs_baseline: 0.0  # candidate must not be worse than baseline by more than this on AUC
+
+serving:
+  default_threshold: 0.50
+
+monitoring:
+  psi_warn: 0.10
+  psi_alert: 0.25
+  drift_features:
+    - tenure
+    - MonthlyCharges
+    - TotalCharges
+    - num_addon_services
+    - charges_per_tenure_month
+
+retraining:
+  scheduled_days: 30
+  drift_feature_count: 3          # retrain if >=3 features breach PSI alert
+  recent_auc_floor: 0.75

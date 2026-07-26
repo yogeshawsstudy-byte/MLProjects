@@ -1,0 +1,1 @@
+{"ts": "2026-07-26T10:26:41.749368+00:00", "rows": 12000, "elapsed_sec": 0.03235219999999117, "rows_per_sec": 370917.58829394216, "positive_rate": 0.4498333333333333, "model_version": "20260726T102553", "output": "artifacts\\predictions\\predictions_20260726T102641.csv"}
